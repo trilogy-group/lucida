@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  lucida-builder:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: lucida-builder:latest
+    container_name: lucida-builder
+    ports:
+      - "3000:3000"
+      - "27017:27017"
+    tty: true
